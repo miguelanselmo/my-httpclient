@@ -24,13 +24,3 @@ func getHttpClient() httpc.Client {
 		Build()
 	return client
 }
-
-func getHttpClientH(headers http.Header) httpc.Client {
-	client := httpc.NewBuilder().
-		SetHeaders(headers).
-		SetConnectionTimeout(2 * time.Second).
-		SetResponseTimeout(3 * time.Second).
-		SetUserAgent("Fedes-Computer").
-		Build()
-	return client
-}
